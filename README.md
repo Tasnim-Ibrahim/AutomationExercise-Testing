@@ -1,7 +1,7 @@
 # OrangeHRM Testing
 
 ## 📌 Overview
-This repository contains comprehensive **manual, automation, API, and performance testing** for **OrangeHRM**, an open-source Human Resource Management system. The goal is to ensure system reliability, functionality, and performance through structured testing methodologies.
+This repository is dedicated to **manual, automation, API, and performance testing** for **OrangeHRM**, an open-source Human Resource Management system. The goal is to ensure system reliability, functionality, and performance through structured test strategies.
 
 ## 🛠 Technologies & Tools Used
 | Type of Testing  | Tools Used  |
@@ -15,20 +15,25 @@ This repository contains comprehensive **manual, automation, API, and performanc
 ```
 OrangeHRM-Testing
 │── 📜 README.md  # Project documentation
+│── 📜 .gitignore  # Ignore unnecessary files
+│── 📜 LICENSE  # Project license (MIT recommended)
 │── 📜 test_plan.md  # Test plan document
-│── 📂 ManualTesting  # Manual test cases & bug reports
-│   ├── test_cases.xlsx
-│   ├── bug_reports.md
-│── 📂 AutomationTesting  # Automated UI tests (Selenium)
-│   ├── test_scripts/  # Java/Python Selenium scripts
-│   ├── pom.xml  # Maven dependencies (if using Java)
-│── 📂 APITesting  # API testing with Postman & RestAssured
-│   ├── api_tests.postman_collection.json
+│── 📂 ManualTesting/  # Manual test cases & bug reports
+│── 📂 AutomationTesting/  # Selenium automation tests
+│   ├── Java/
+│   │   ├── pom.xml  # Maven dependencies
+│   │   ├── src/test/java/  # Java Selenium test scripts
+│   ├── Python/
+│       ├── requirements.txt  # Python dependencies
+│       ├── tests/  # Python Selenium test scripts
+│── 📂 APITesting/  # API testing scripts
+│   ├── PostmanCollection.json
 │   ├── restassured_tests.java
-│── 📂 PerformanceTesting  # JMeter scripts
-│   ├── orangehrm_performance.jmx
+│   ├── api_tests.py
+│── 📂 PerformanceTesting/  # JMeter performance tests
+│   ├── jmeter_test_plan.jmx
 │   ├── results.csv
-│── 📂 Reports  # Test execution reports
+│── 📂 Reports/  # Test execution reports
 │   ├── manual_test_report.md
 │   ├── automation_test_report.md
 │   ├── performance_test_report.md
@@ -63,7 +68,7 @@ newman run api_tests.postman_collection.json --reporters cli,junit
 ```
 #### ➤ Run JMeter Performance Test
 ```bash
-jmeter -n -t PerformanceTesting/orangehrm_performance.jmx -l results.csv
+jmeter -n -t PerformanceTesting/jmeter_test_plan.jmx -l results.csv
 ```
 
 ## 📊 Test Reports
