@@ -1,22 +1,8 @@
-# Java Automation Testing
+# Java Test Classes
 
-This folder contains Selenium test scripts written in **Java** using the **TestNG** framework.
+This folder contains all the Java test classes for automation using Selenium and TestNG.
 
-### 🧰 Tools & Technologies
-- Selenium WebDriver
-- TestNG
-- Maven
-- ChromeDriver
-- Java (JDK 8+)
-
-### 📁 Structure
-- `src/test/java/` — Java test classes
-- `pom.xml` — Maven build configuration (to be added)
-
-### ▶️ How to Run Tests
-```bash
-# Run from root of Maven project
-mvn test
-```
-
-Ensure your ChromeDriver is properly configured and available in your system PATH or project directory.
+Organize your test cases logically and follow good naming practices like:
+- `LoginTest.java`
+- `RegisterTest.java`
+- `CartTest.java`
