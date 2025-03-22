@@ -42,7 +42,7 @@ AutomationExercise-Testing
 ## 🚀 Getting Started
 ### 🏗 1. Clone the Repository
 ```bash
-git clone https://github.com/TasnimIbrahim/AutomationExercise-Testing.git
+git clone https://github.com/Tasnim-Ibrahim/AutomationExercise-Testing.git
 cd AutomationExercise-Testing
 ```
 
