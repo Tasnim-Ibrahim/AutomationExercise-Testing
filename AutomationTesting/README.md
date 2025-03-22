@@ -3,7 +3,7 @@
 This folder contains Selenium test scripts written in Java using TestNG, along with Maven configuration files.
 
 
-python_automation_readme = """# Python Automation Testing
+# Python Automation Testing
 
 This folder contains Selenium-based test scripts written in **Python** using the **Pytest** framework.
 
