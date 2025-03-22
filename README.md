@@ -1,19 +1,19 @@
-# OrangeHRM Testing
+# AutomationExercise Testing
 
 ## 📌 Overview
-This repository is dedicated to **manual, automation, API, and performance testing** for **OrangeHRM**, an open-source Human Resource Management system. The goal is to ensure system reliability, functionality, and performance through structured test strategies.
+This repository is dedicated to **manual, automation, API, and performance testing** for [**Automation Exercise**](https://www.automationexercise.com/), a demo e-commerce platform used for testing practice. The goal is to ensure the site’s reliability, functionality, and performance through structured test strategies.
 
 ## 🛠 Technologies & Tools Used
-| Type of Testing  | Tools Used  |
-|-----------------|------------|
-| **Manual Testing** | Excel (Test case documentation, defect reporting) |
+| Type of Testing      | Tools Used                                              |
+|----------------------|---------------------------------------------------------|
+| **Manual Testing**   | Excel (Test case documentation, defect reporting)       |
 | **Automation Testing** | Selenium, TestNG (Java) / Pytest (Python) (Automate UI testing) |
-| **API Testing** | Postman, RestAssured (Java) (Validate API responses) |
-| **Performance Testing** | Apache JMeter (Load and stress testing) |
+| **API Testing**      | Postman, RestAssured (Java) (Validate API responses)    |
+| **Performance Testing** | Apache JMeter (Load and stress testing)               |
 
 ## 🔍 Project Structure
 ```
-OrangeHRM-Testing
+AutomationExercise-Testing
 │── 📜 README.md  # Project documentation
 │── 📜 .gitignore  # Ignore unnecessary files
 │── 📜 LICENSE  # Project license (MIT recommended)
@@ -42,30 +42,35 @@ OrangeHRM-Testing
 ## 🚀 Getting Started
 ### 🏗 1. Clone the Repository
 ```bash
-git clone https://github.com/TasnimIbrahim/OrangeHRM-Testing.git
-cd OrangeHRM-Testing
+git clone https://github.com/TasnimIbrahim/AutomationExercise-Testing.git
+cd AutomationExercise-Testing
 ```
+
 ### 🔧 2. Set Up Dependencies
 #### ➤ For Selenium (Java)
 ```bash
 # Ensure Java and Maven are installed
 mvn install
 ```
+
 #### ➤ For Selenium (Python)
 ```bash
 # Ensure Python is installed
 pip install -r requirements.txt
 ```
+
 ### 🎯 3. Running Tests
 #### ➤ Run Automated UI Tests
 ```bash
 mvn test  # Generates reports in target/surefire-reports/
 pytest    # Generates logs in reports/
 ```
+
 #### ➤ Run API Tests (Postman)
 ```bash
 newman run api_tests.postman_collection.json --reporters cli,junit
 ```
+
 #### ➤ Run JMeter Performance Test
 ```bash
 jmeter -n -t PerformanceTesting/jmeter_test_plan.jmx -l results.csv
