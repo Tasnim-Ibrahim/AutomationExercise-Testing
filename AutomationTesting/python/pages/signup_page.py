@@ -1,6 +1,7 @@
 # 📂 automation/python/pages/signup_page.py
 import random
 import string
+import time
 from selenium.webdriver.common.by import By
 
 class SignupPage:
@@ -22,6 +23,8 @@ class SignupPage:
 
     def go_to_signup(self):
         self.driver.find_element(*self.signup_login_link).click()
+        time.sleep(5)
+
 
     def generate_random_email(self):
         prefix = ''.join(random.choices(string.ascii_lowercase + string.digits, k=6))
