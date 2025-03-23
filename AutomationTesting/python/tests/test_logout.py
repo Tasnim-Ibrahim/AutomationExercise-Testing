@@ -12,5 +12,5 @@ class TestLogout:
         # ✅ Click the Logout button
         driver.find_element(By.XPATH, "//a[contains(text(),'Logout')]").click()
 
-        # ✅ Assert that user is back on login page
+        # ✅ Assert the user is back on login page
         assert "Login to your account" in driver.page_source
