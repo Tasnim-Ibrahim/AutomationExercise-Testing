@@ -2,7 +2,6 @@ import pytest
 from selenium.webdriver.common.by import By
 from pages.login_page import LoginPage
 
-@pytest.mark.usefixtures("setup")
 class TestLogout:
 
     def test_user_can_logout(self, driver):
