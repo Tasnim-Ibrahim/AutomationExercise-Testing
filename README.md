@@ -1,93 +1,117 @@
-# AutomationExercise Testing
+# 🧪 QA Final Project – AutomationExercise Testing
 
-## 📌 Overview
-This repository is dedicated to **manual, automation, API, and performance testing** for [**Automation Exercise**](https://www.automationexercise.com/), a demo e-commerce platform used for testing practice. The goal is to ensure the site’s reliability, functionality, and performance through structured test strategies.
+This repository contains a complete QA project based on [AutomationExercise](https://www.automationexercise.com/), designed as a **graduation project** for a QA test team.
 
-## 🛠 Technologies & Tools Used
-| Type of Testing      | Tools Used                                              |
-|----------------------|---------------------------------------------------------|
-| **Manual Testing**   | Excel (Test case documentation, defect reporting)       |
-| **Automation Testing** | Selenium, TestNG (Java) / Pytest (Python) (Automate UI testing) |
-| **API Testing**      | Postman, RestAssured (Java) (Validate API responses)    |
-| **Performance Testing** | Apache JMeter (Load and stress testing)               |
+It includes:
+- ✅ Manual Test Cases
+- 🤖 Automation Testing (Python & Java)
+- 🔌 API Testing
+- ⚙️ Performance Testing
 
-## 🔍 Project Structure
+---
+
+## 📁 Project Structure
+
 ```
-AutomationExercise-Testing
-│── 📜 README.md  # Project documentation
-│── 📜 .gitignore  # Ignore unnecessary files
-│── 📜 LICENSE  # Project license (MIT recommended)
-│── 📜 test_plan.md  # Test plan document
-│── 📂 ManualTesting/  # Manual test cases & bug reports
-│── 📂 AutomationTesting/  # Selenium automation tests
-│   ├── Java/
-│   │   ├── pom.xml  # Maven dependencies
-│   │   ├── src/test/java/  # Java Selenium test scripts
-│   ├── Python/
-│       ├── requirements.txt  # Python dependencies
-│       ├── tests/  # Python Selenium test scripts
-│── 📂 APITesting/  # API testing scripts
-│   ├── PostmanCollection.json
-│   ├── restassured_tests.java
-│   ├── api_tests.py
-│── 📂 PerformanceTesting/  # JMeter performance tests
-│   ├── jmeter_test_plan.jmx
-│   ├── results.csv
-│── 📂 Reports/  # Test execution reports
-│   ├── manual_test_report.md
-│   ├── automation_test_report.md
-│   ├── performance_test_report.md
+AutomationExercise-Testing/
+├── manual/              # Manual test cases (Excel, PDF, etc.)
+├── automation/          # Automation testing
+│   ├── python/
+│   └── java/
+├── api/                 # API testing scripts (Postman / Python / JavaScript)
+├── performance/         # Performance tests (JMeter / Locust / etc.)
+├── .gitignore
+├── README.md
+└── requirements.txt     # For Python dependencies
 ```
 
-## 🚀 Getting Started
-### 🏗 1. Clone the Repository
+---
+
+## 💻 Technologies Used
+
+- Manual Testing: Test case design, test execution
+- Automation:
+  - Python (unittest/pytest, Selenium)
+  - Java (JUnit/TestNG, Selenium)
+- API: Postman / REST-assured / Python `requests`
+- Performance: JMeter / Locust
+- Tools: Git, GitHub, VS Code, IntelliJ, Postman, JMeter
+
+---
+
+## 🚀 How to Use
+
+### 📄 Manual Tests
+
+Find test case documents in the `manual/` folder (PDFs, Excel, etc.)
+
+---
+
+### 🐍 Run Python Automation Tests
+
 ```bash
-git clone https://github.com/Tasnim-Ibrahim/AutomationExercise-Testing.git
-cd AutomationExercise-Testing
+cd automation/python
+python sample_test.py
 ```
 
-### 🔧 2. Set Up Dependencies
-#### ➤ For Selenium (Java)
+---
+
+### ☕ Run Java Automation Tests
+
 ```bash
-# Ensure Java and Maven are installed
-mvn install
+cd automation/java
+javac SampleTest.java
+java SampleTest
 ```
 
-#### ➤ For Selenium (Python)
+---
+
+### 🔌 Run API Tests
+
+If using Postman:
+- Import the collection from `api/` into Postman
+- Run using Collection Runner
+
+If using code:
 ```bash
-# Ensure Python is installed
-pip install -r requirements.txt
+cd api/
+python test_api_sample.py
 ```
 
-### 🎯 3. Running Tests
-#### ➤ Run Automated UI Tests
+---
+
+### ⚙️ Run Performance Tests
+
+If using JMeter:
+- Open `.jmx` files in JMeter GUI
+
+If using Locust:
 ```bash
-mvn test  # Generates reports in target/surefire-reports/
-pytest    # Generates logs in reports/
+cd performance/
+locust
 ```
 
-#### ➤ Run API Tests (Postman)
-```bash
-newman run api_tests.postman_collection.json --reporters cli,junit
-```
-
-#### ➤ Run JMeter Performance Test
-```bash
-jmeter -n -t PerformanceTesting/jmeter_test_plan.jmx -l results.csv
-```
-
-## 📊 Test Reports
-- **Manual Test Report** → `Reports/manual_test_report.md` (Generated after test execution)
-- **Automation Report** → `Reports/automation_test_report.md` (Selenium test results)
-- **API Test Results** → `Reports/api_test_report.md` (Postman Newman results)
-- **Performance Report** → `Reports/performance_test_report.md` (JMeter execution report)
+---
 
 ## 🤝 Contributing
-Contributions are welcome! If you'd like to improve the test coverage:
-1. Fork the repository.
-2. Create a feature branch (`feature-branch`).
-3. Commit your changes.
-4. Open a pull request.
 
-## 📜 License
-This project is licensed under the **MIT License**.
+1. Fork the repo
+2. Create your feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes
+4. Push to GitHub
+5. Open a Pull Request
+
+---
+
+## 👥 Team
+
+This project is part of a **QA graduation project** done by a test team covering all key QA disciplines.
+
+---
+
+## 📌 Notes
+
+- Placeholder test files are included — replace them with your real tests.
+- Make sure to update dependencies in `requirements.txt` as needed.
+
+---
