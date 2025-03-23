@@ -1,7 +1,10 @@
 # 📂 automation/python/tests/test_login.py
 import pytest
+from selenium.webdriver.common.by import By
 from pages.login_page import LoginPage
 from pages.signup_page import SignupPage
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class TestLogin:
 
@@ -22,4 +25,12 @@ class TestLogin:
         signup_page.go_to_signup()
         email = signup_page.generate_random_email()
         signup_page.fill_signup_form("Automation Tester", email, "Test@1234")
-        assert "ACCOUNT CREATED!" in driver.page_source
+
+        # ✅ Wait for the <b> tag inside <h2> that contains the success message
+        wait = WebDriverWait(driver, 10)
+        heading_text = wait.until(
+            EC.presence_of_element_located((By.XPATH, "//h2[@data-qa='account-created']/b"))
+        )
+
+        assert heading_text.text.strip() == "ACCOUNT CREATED!"
+
