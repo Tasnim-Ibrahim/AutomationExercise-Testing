@@ -1,117 +1,114 @@
-# 🧪 QA Final Project – AutomationExercise Testing
 
-This repository contains a complete QA project based on [AutomationExercise](https://www.automationexercise.com/), designed as a **graduation project** for a QA test team.
+# 🎓 AutomationExercise Testing Project – Graduation Portfolio
 
-It includes:
-- ✅ Manual Test Cases
-- 🤖 Automation Testing (Python & Java)
-- 🔌 API Testing
-- ⚙️ Performance Testing
+Welcome to the **AutomationExercise Testing Project**, a comprehensive QA project developed as a **Graduation Project** for the **Digital Egypt Pioneers Initiative (DEPI)**. This project applies a full suite of quality assurance practices across **Manual, Automation, API, and Performance Testing**, targeting the live [Automation Exercise](https://automationexercise.com) e-commerce demo platform.
 
 ---
 
-## 📁 Project Structure
+## 👥 Team Members
+
+- **Tasnim Ibrahim Hassan**
+- **Mohamed Zaki Mohamed**
+- **Aya Helmy Mohamed**
+- **Mo'men Mohamed Abdullah**
+- **AbdelRahman Mohamed Ibrahim**
+
+---
+
+## 📁 Repository Overview
 
 ```
 AutomationExercise-Testing/
-├── manual/              # Manual test cases (Excel, PDF, etc.)
-├── automation/          # Automation testing
-│   ├── python/
-│   └── java/
-├── api/                 # API testing scripts (Postman / Python / JavaScript)
-├── performance/         # Performance tests (JMeter / Locust / etc.)
-├── .gitignore
-├── README.md
-└── requirements.txt     # For Python dependencies
+├── ManualTesting/          # Test cases, execution logs, and bug reports
+├── AutomationTesting/
+│   └── python/             # Selenium WebDriver automation using Pytest
+├── APITesting/             # Postman collections and test scripts
+├── PerformanceTesting/     # JMeter test plans and reports
+├── Reports/                # Generated reports (HTML, Allure, PDF)
+├── Jenkins/                # CI/CD configuration (optional)
+├── Database/               # Sample test data (Note: Database files are not included in repo)
+├── requirements.txt        # Python dependencies
+├── test_plan.md            # Test planning documentation
+└── README.md               # Project documentation
+```
+
+> 📌 **Note:** The `Database/` folder represents placeholder content for test data and schema if available. Please ensure data files are added by the team manually.
+
+---
+
+## 🧰 Tools & Technologies
+
+| Category            | Tools Used                                                   |
+|---------------------|--------------------------------------------------------------|
+| Manual Testing      | Excel, Word, Bug Reports (PDF), Test Cases                   |
+| Automation Testing  | Python, Selenium, Pytest, HTML Report, Allure                |
+| API Testing         | Postman, Newman, JSON-based validation                       |
+| Performance Testing | Apache JMeter                                                |
+| CI/CD               | Jenkins (optional pipeline for test automation)              |
+| Documentation       | Markdown, GitHub Issues, Test Plan Documents                 |
+
+---
+
+## 🚀 Quick Start
+
+### 🔧 Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Tasnim-Ibrahim/AutomationExercise-Testing.git
+```
+
+2. Install Python dependencies:
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
-## 💻 Technologies Used
-
-- Manual Testing: Test case design, test execution
-- Automation:
-  - Python (unittest/pytest, Selenium)
-  - Java (JUnit/TestNG, Selenium)
-- API: Postman / REST-assured / Python `requests`
-- Performance: JMeter / Locust
-- Tools: Git, GitHub, VS Code, IntelliJ, Postman, JMeter
-
----
-
-## 🚀 How to Use
-
-### 📄 Manual Tests
-
-Find test case documents in the `manual/` folder (PDFs, Excel, etc.)
-
----
-
-### 🐍 Run Python Automation Tests
+## 🧪 Run Automation Tests
 
 ```bash
-cd automation/python
-python sample_test.py
+pytest AutomationTesting/python/tests/ --html=Reports/checkout_report.html
 ```
 
 ---
 
-### ☕ Run Java Automation Tests
+## 📊 Run API Tests with Newman
 
 ```bash
-cd automation/java
-javac SampleTest.java
-java SampleTest
+newman run APITesting/collection.json -r cli,html --reporter-html-export=APITesting/report.html
 ```
 
 ---
 
-### 🔌 Run API Tests
+## ⚙️ Run Performance Tests (JMeter)
 
-If using Postman:
-- Import the collection from `api/` into Postman
-- Run using Collection Runner
-
-If using code:
-```bash
-cd api/
-python test_api_sample.py
-```
+1. Open `.jmx` file in Apache JMeter.
+2. Configure thread group.
+3. Run and analyze the results using listeners.
 
 ---
 
-### ⚙️ Run Performance Tests
+## 🗂️ Test Artifacts Included
 
-If using JMeter:
-- Open `.jmx` files in JMeter GUI
-
-If using Locust:
-```bash
-cd performance/
-locust
-```
-
----
-
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create your feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes
-4. Push to GitHub
-5. Open a Pull Request
+- ✅ Manual Test Cases (Excel)
+- 🐞 Bug Reports (PDF/Excel)
+- ✅ Automation Test Scripts (Selenium + Python)
+- 🔁 API Test Collection (Postman + Newman)
+- ⚙️ Performance Test Plan (JMeter)
+- 📄 Test Plan Document (`test_plan.md`)
+- 📈 Reports (HTML and Allure-ready)
 
 ---
 
-## 👥 Team
+## 📌 Final Notes
 
-This project is part of a **QA graduation project** done by a test team covering all key QA disciplines.
+This project reflects a real-world QA lifecycle and professional testing structure. It demonstrates your ability to organize, automate, report, and validate end-to-end software quality.
 
----
-
-## 📌 Notes
-
-- Placeholder test files are included — replace them with your real tests.
-- Make sure to update dependencies in `requirements.txt` as needed.
+> ⭐ Star the repository if you find this useful or inspiring!
 
 ---
+
+## 📄 License
+
+This project is developed for educational purposes and licensed under the [MIT License](LICENSE).
