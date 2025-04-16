@@ -1,0 +1,40 @@
+[
+  {
+    "id": "complete_purchase_flow",
+    "user": {
+      "title": "Mr",
+      "name": "Abdelrahman Aldesoky",
+      "email": "abdelrahman.mohamed.aldesoky@gmail.com",
+      "password": "helloDepi!",
+      "dayOfBirth": "10",
+      "monthOfBirth": "8",
+      "yearOfBirth": "1990",
+      "newsletter": true,
+      "specialOffers": true,
+      "firstName": "Abdelrahman",
+      "lastName": "Aldesky",
+      "company": "N/A",
+      "address1": "12 Alghawas St",
+      "address2": "Apt 9",
+      "country": "United States",
+      "state": "Cairo",
+      "city": "Nasr City",
+      "zipcode": "11727",
+      "mobileNumber": "01007016760"
+    },
+    "product": {
+      "productId": 1,
+      "name": "Blue Top",
+      "price": 500.0,
+      "category": "Women",
+      "quantity": 4
+    },
+    "payment": {
+      "nameOnCard": "Abdelrahman Aldesoky",
+      "cardNumber": "4111111111111111",
+      "cvc": "123",
+      "expiryMonth": "12",
+      "expiryYear": "2025"
+    }
+  }
+]

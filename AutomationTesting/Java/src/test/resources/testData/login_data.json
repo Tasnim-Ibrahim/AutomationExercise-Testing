@@ -1,0 +1,23 @@
+[
+  {
+    "id": "valid_user",
+    "name": "Mohamed Zaki",
+    "email": "mohamed.zaki@gmail.com",
+    "password": "helloDepi!2",
+    "shouldSucceed": true
+  },
+  {
+    "id": "invalid_password",
+    "name": "invalid_password",
+    "email": "test@example.com",
+    "password": "wrongpassword",
+    "shouldSucceed": false
+  },
+  {
+    "id": "invalid_email",
+    "name": "invalid_email",
+    "email": "nonexistent@example.com",
+    "password": "password123",
+    "shouldSucceed": false
+  }
+]

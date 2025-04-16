@@ -1,0 +1,18 @@
+[
+  {
+    "id": "women_product",
+    "productId": 1,
+    "name": "Blue Top",
+    "price": 500.0,
+    "category": "Women",
+    "quantity": 4
+  },
+  {
+    "id": "mens_product",
+    "productId": 2,
+    "name": "Men Tshirt",
+    "price": 400.0,
+    "category": "Men",
+    "quantity": 2
+  }
+]

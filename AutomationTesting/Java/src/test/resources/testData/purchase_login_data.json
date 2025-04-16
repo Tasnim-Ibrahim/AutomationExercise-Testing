@@ -1,0 +1,29 @@
+[
+  {
+    "id": "purchase_with_login",
+    "user": {
+      "id": "valid_user",
+      "name": "Mohamed Zaki",
+      "email": "mohamed.zaki@gmail.com",
+      "password": "helloDepi!2",
+      "shouldSucceed": true
+    },
+    "product": {
+      "id": "women_product",
+      "productId": 1,
+      "name": "Blue Top",
+      "price": 500.0,
+      "category": "Women",
+      "quantity": 3
+    },
+    "payment": {
+      "id": "valid_visa",
+      "nameOnCard": "John Doe",
+      "cardNumber": "4111111111111111",
+      "cvc": "123",
+      "expiryMonth": "12",
+      "expiryYear": "2025",
+      "shouldSucceed": true
+    }
+  }
+]

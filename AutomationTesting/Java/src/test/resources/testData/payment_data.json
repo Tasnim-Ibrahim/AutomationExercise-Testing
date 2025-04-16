@@ -1,0 +1,20 @@
+[
+  {
+    "id": "valid_visa",
+    "nameOnCard": "John Doe",
+    "cardNumber": "4111111111111111",
+    "cvc": "123",
+    "expiryMonth": "12",
+    "expiryYear": "2025",
+    "shouldSucceed": true
+  },
+  {
+    "id": "expired_card",
+    "nameOnCard": "Jane Smith",
+    "cardNumber": "5555555555554444",
+    "cvc": "321",
+    "expiryMonth": "01",
+    "expiryYear": "2020",
+    "shouldSucceed": false
+  }
+]

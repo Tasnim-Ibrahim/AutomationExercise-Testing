@@ -1,0 +1,9 @@
+[
+  {
+    "id": "valid_user",
+    "name": "Mohamed Zaki",
+    "email": "mohamed.zaki@gmail.com",
+    "password": "helloDepi!2",
+    "shouldSucceed": true
+  }
+]
