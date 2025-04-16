@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "61f8cfd9-aae0-4f36-bacd-8f1c2d31d68b",
+		"name": "Automation_API_Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22302763",
+		"_collection_link": "https://testing-team-8846.postman.co/workspace/Team-Workspace~6125e52a-0763-4acb-8b09-2e7e33bb1b46/collection/22302763-61f8cfd9-aae0-4f36-bacd-8f1c2d31d68b?action=share&source=collection_link&creator=22302763"
+	},
+	"item": [
+		{
+			"name": "Get All Products List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if each product in the array has the required properties",
+							"const response = pm.response.json();",
+							"response.products.forEach(product => {",
+							"    pm.test(`Product ${product.id} has the required properties`, function () {",
+							"        pm.expect(product.id).to.be.a('number');",
+							"        pm.expect(product.name).to.be.a('string');",
+							"        pm.expect(product.price).to.be.a('string');",
+							"        pm.expect(product.brand).to.be.a('string');",
+							"        pm.expect(product.category).to.be.an('object');",
+							"        pm.expect(product.category.usertype.usertype).to.be.a('string');",
+							"        pm.expect(product.category.category).to.be.a('string');",
+							"    });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/productsList",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To All Products List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(405);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"This request method is not supported.\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/productsList",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"",
+							"// Array of brands and IDs to check in the response",
+							"const expectedBrands = [",
+							"    {",
+							"        \"id\": 1,",
+							"        \"brand\": \"Polo\"",
+							"    },",
+							"    {",
+							"        \"id\": 2,",
+							"        \"brand\": \"H&M\"",
+							"    },",
+							"        {",
+							"            \"id\": 3,",
+							"            \"brand\": \"Madame\"",
+							"        },",
+							"        {",
+							"            \"id\": 4,",
+							"            \"brand\": \"Madame\"",
+							"        },",
+							"        {",
+							"            \"id\": 5,",
+							"            \"brand\": \"Mast & Harbour\"",
+							"        },",
+							"        {",
+							"            \"id\": 6,",
+							"            \"brand\": \"H&M\"",
+							"        },",
+							"        {",
+							"            \"id\": 7,",
+							"            \"brand\": \"Madame\"",
+							"        },",
+							"        {",
+							"            \"id\": 8,",
+							"            \"brand\": \"Polo\"",
+							"        },",
+							"        {",
+							"            \"id\": 11,",
+							"            \"brand\": \"Babyhug\"",
+							"        },",
+							"        {",
+							"            \"id\": 12,",
+							"            \"brand\": \"Babyhug\"",
+							"        },",
+							"        {",
+							"            \"id\": 13,",
+							"            \"brand\": \"Allen Solly Junior\"",
+							"        },",
+							"        {",
+							"            \"id\": 14,",
+							"            \"brand\": \"Kookie Kids\"",
+							"        },",
+							"        {",
+							"            \"id\": 15,",
+							"            \"brand\": \"Babyhug\"",
+							"        },",
+							"        {",
+							"            \"id\": 16,",
+							"            \"brand\": \"Babyhug\"",
+							"        },",
+							"        {",
+							"            \"id\": 18,",
+							"            \"brand\": \"Kookie Kids\"",
+							"        },",
+							"        {",
+							"            \"id\": 19,",
+							"            \"brand\": \"Allen Solly Junior\"",
+							"        },",
+							"        {",
+							"            \"id\": 20,",
+							"            \"brand\": \"Kookie Kids\"",
+							"        },",
+							"        {",
+							"            \"id\": 21,",
+							"            \"brand\": \"Biba\"",
+							"        },",
+							"        {",
+							"            \"id\": 22,",
+							"            \"brand\": \"Biba\"",
+							"        },",
+							"        {",
+							"            \"id\": 23,",
+							"            \"brand\": \"Biba\"",
+							"        },",
+							"        {",
+							"            \"id\": 24,",
+							"            \"brand\": \"Allen Solly Junior\"",
+							"        },",
+							"        {",
+							"            \"id\": 28,",
+							"            \"brand\": \"H&M\"",
+							"        },",
+							"        {",
+							"            \"id\": 29,",
+							"            \"brand\": \"Polo\"",
+							"        },",
+							"        {",
+							"            \"id\": 30,",
+							"            \"brand\": \"Polo\"",
+							"        },",
+							"        {",
+							"            \"id\": 31,",
+							"            \"brand\": \"H&M\"",
+							"        },",
+							"        {",
+							"            \"id\": 33,",
+							"            \"brand\": \"Polo\"",
+							"        },",
+							"        {",
+							"            \"id\": 35,",
+							"            \"brand\": \"H&M\"",
+							"        },",
+							"        {",
+							"            \"id\": 37,",
+							"            \"brand\": \"Polo\"",
+							"        },",
+							"        {",
+							"            \"id\": 38,",
+							"            \"brand\": \"Madame\"",
+							"        },",
+							"        {",
+							"            \"id\": 39,",
+							"            \"brand\": \"Biba\"",
+							"        },",
+							"        {",
+							"            \"id\": 40,",
+							"            \"brand\": \"Biba\"",
+							"        },",
+							"        {",
+							"            \"id\": 41,",
+							"            \"brand\": \"Madame\"",
+							"        },",
+							"        {",
+							"            \"id\": 42,",
+							"            \"brand\": \"Mast & Harbour\"",
+							"        },",
+							"        {",
+							"            \"id\": 43,",
+							"            \"brand\": \"Mast & Harbour\"",
+							"        }",
+							"];",
+							"",
+							"// Loop through each expected brand and ID to check if it exists in the response",
+							"expectedBrands.forEach(expectedBrand => {",
+							"    pm.test(`Brand \"${expectedBrand.brand}\" with ID ${expectedBrand.id} exists in the response`, () => {",
+							"        const brandExists = response.brands.some(brand => brand.id === expectedBrand.id && brand.brand === expectedBrand.brand);",
+							"        pm.expect(brandExists).to.be.true;",
+							"    });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/brandsList",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"brandsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT To All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(405);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"This request method is not supported.\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/brandsList",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"brandsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Search Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "search_product",
+							"value": "top",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "search_product",
+							"value": "tshirt",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "search_product",
+							"value": "Men",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/searchProduct",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Search Product without search_product parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(400);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"Bad request, search_product parameter is missing in POST request.\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/searchProduct",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login with valid details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"User exists!\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "Gmail@MoSalah.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Liverpool",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/verifyLogin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login without email parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(400);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"Bad request, email or password parameter is missing in POST request.\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "helloDepi!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/verifyLogin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE To Verify Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(405);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"This request method is not supported.\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/verifyLogin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login with invalid details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(404);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"User not found!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abdelrahman.mohamed.aldesoky@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "helloDepi!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/verifyLogin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Create/Register User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(201);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"User created!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "a A",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Mrs",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "A",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "hello@yahoo.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qew2",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "birth_month",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "birth_year",
+							"value": "1995",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": " 34524dsada",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": " pep",
+							"type": "text"
+						},
+						{
+							"key": "address1",
+							"value": " zd5d6asd",
+							"type": "text"
+						},
+						{
+							"key": "address2",
+							"value": " 54zdzdss",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Cairo",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Nasr City",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "54353",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Egypt",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "01232434243",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/createAccount",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"createAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT METHOD To Update User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"User updated!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "a A",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Mrs",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "A",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "hello@yahoo.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qew2",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "birth_month",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "birth_year",
+							"value": "1995",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": " 34524dsada",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": " pep",
+							"type": "text"
+						},
+						{
+							"key": "address1",
+							"value": " zd5d6asd",
+							"type": "text"
+						},
+						{
+							"key": "address2",
+							"value": " 54zdzdss",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Cairo",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Madrid",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "54353",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Spain",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "01232434243",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/updateAccount",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"updateAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user account detail by email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();",
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    pm.expect(jsonData.responseCode).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"Verify the user's country is correct\", function () {",
+							"    pm.expect(jsonData.user.country).to.eql('Spain');",
+							"});",
+							"",
+							"pm.test(\"Verify the user's city is correct\", function () {",
+							"    pm.expect(jsonData.user.city).to.eql('Madrid');",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/getUserDetailByEmail?email=hello@yahoo.com",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"getUserDetailByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "hello@yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE METHOD To Delete User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code in body matches HTTP status\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.responseCode).to.eql(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    const jsonData = pm.response.json(); ",
+							"    pm.expect(jsonData.message).to.eql(\"Account deleted!\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hello@yahoo.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qew2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/deleteAccount",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deleteAccount"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"",
+					"pm.test(\"Response time is less than 200ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://automationexercise.com/api/",
+			"type": "string"
+		}
+	]
+}
