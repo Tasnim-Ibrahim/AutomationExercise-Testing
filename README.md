@@ -50,46 +50,6 @@ AutomationExercise-Testing/
 
 ---
 
-## 🚀 Quick Start
-
-### 🔧 Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Tasnim-Ibrahim/AutomationExercise-Testing.git
-```
-
-2. Install Python dependencies:
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 🧪 Run Automation Tests
-
-```bash
-pytest AutomationTesting/python/tests/ --html=Reports/checkout_report.html
-```
-
----
-
-## 📊 Run API Tests with Newman
-
-```bash
-newman run APITesting/collection.json -r cli,html --reporter-html-export=APITesting/report.html
-```
-
----
-
-## ⚙️ Run Performance Tests (JMeter)
-
-1. Open `.jmx` file in Apache JMeter.
-2. Configure thread group.
-3. Run and analyze the results using listeners.
-
----
-
 ## 🗂️ Test Artifacts Included
 
 - ✅ Manual Test Cases (Excel)
