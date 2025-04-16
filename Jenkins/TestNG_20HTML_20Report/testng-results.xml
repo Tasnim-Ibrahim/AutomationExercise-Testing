@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-15T15:17:24 EET" name="Automation Exercise Test Suite" finished-at="2025-04-15T15:23:01 EET" duration-ms="337150">
+    <groups>
+    </groups>
+    <test started-at="2025-04-15T15:17:24 EET" name="Account Management Tests" finished-at="2025-04-15T15:19:21 EET" duration-ms="117350">
+      <class name="tests.account.SignupTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.account.SignupTests@661972b0]" started-at="2025-04-15T15:17:25 EET" name="setUp" finished-at="2025-04-15T15:17:38 EET" duration-ms="13395" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterUser(data.SignupData)[pri:0, instance:tests.account.SignupTests@661972b0]" started-at="2025-04-15T15:17:38 EET" name="testRegisterUser" data-provider="signupData" finished-at="2025-04-15T15:18:02 EET" duration-ms="24114" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.SignupData@24a298a6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.account.SignupTests@661972b0]" started-at="2025-04-15T15:18:02 EET" name="tearDown" finished-at="2025-04-15T15:18:03 EET" duration-ms="541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.account.SignupTests@661972b0]" started-at="2025-04-15T15:18:03 EET" name="setUp" finished-at="2025-04-15T15:18:12 EET" duration-ms="9172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterUser(data.SignupData)[pri:0, instance:tests.account.SignupTests@661972b0]" started-at="2025-04-15T15:18:12 EET" name="testRegisterUser" data-provider="signupData" finished-at="2025-04-15T15:18:16 EET" duration-ms="4153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.SignupData@7ad1caa2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.account.SignupTests@661972b0]" started-at="2025-04-15T15:18:16 EET" name="tearDown" finished-at="2025-04-15T15:18:17 EET" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.account.SignupTests -->
+      <class name="tests.account.LoginTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:17 EET" name="setUp" finished-at="2025-04-15T15:18:25 EET" duration-ms="8948" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testUserLogin(data.LoginData)[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:25 EET" name="testUserLogin" data-provider="loginData" finished-at="2025-04-15T15:18:36 EET" duration-ms="10049" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.LoginData@45b15381]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:36 EET" name="tearDown" finished-at="2025-04-15T15:18:36 EET" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:36 EET" name="setUp" finished-at="2025-04-15T15:18:44 EET" duration-ms="8516" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testUserLogin(data.LoginData)[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:44 EET" name="testUserLogin" data-provider="loginData" finished-at="2025-04-15T15:18:48 EET" duration-ms="4100" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.LoginData@488f3dd1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:48 EET" name="tearDown" finished-at="2025-04-15T15:18:49 EET" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:49 EET" name="setUp" finished-at="2025-04-15T15:18:57 EET" duration-ms="8711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testUserLogin(data.LoginData)[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:18:57 EET" name="testUserLogin" data-provider="loginData" finished-at="2025-04-15T15:19:01 EET" duration-ms="3962" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.LoginData@515b9d4a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.account.LoginTests@57a3af25]" started-at="2025-04-15T15:19:01 EET" name="tearDown" finished-at="2025-04-15T15:19:02 EET" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.account.LoginTests -->
+      <class name="tests.account.LogoutTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.account.LogoutTests@2b662a77]" started-at="2025-04-15T15:19:02 EET" name="setUp" finished-at="2025-04-15T15:19:11 EET" duration-ms="9006" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testUserLogout(data.LogoutData)[pri:0, instance:tests.account.LogoutTests@2b662a77]" started-at="2025-04-15T15:19:11 EET" name="testUserLogout" data-provider="logoutData" finished-at="2025-04-15T15:19:21 EET" duration-ms="10562" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.LogoutData@6b162ecc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.account.LogoutTests@2b662a77]" started-at="2025-04-15T15:19:21 EET" name="tearDown" finished-at="2025-04-15T15:19:21 EET" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.account.LogoutTests -->
+    </test> <!-- Account Management Tests -->
+    <test started-at="2025-04-15T15:19:21 EET" name="Product Purchase Tests" finished-at="2025-04-15T15:22:24 EET" duration-ms="182941">
+      <class name="tests.product.PurchaseWithSignupTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.product.PurchaseWithSignupTests@77888435]" started-at="2025-04-15T15:19:21 EET" name="setUp" finished-at="2025-04-15T15:19:31 EET" duration-ms="9477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCompletePurchaseFlow(data.PurchaseSignUpData)[pri:0, instance:tests.product.PurchaseWithSignupTests@77888435]" started-at="2025-04-15T15:19:31 EET" name="testCompletePurchaseFlow" data-provider="PurchaseSignUpData" finished-at="2025-04-15T15:20:20 EET" duration-ms="49002" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.PurchaseSignUpData@175581eb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompletePurchaseFlow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.product.PurchaseWithSignupTests@77888435]" started-at="2025-04-15T15:20:20 EET" name="tearDown" finished-at="2025-04-15T15:20:20 EET" duration-ms="391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.product.PurchaseWithSignupTests -->
+      <class name="tests.product.PurchaseWithLoginTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:20:20 EET" name="setUp" finished-at="2025-04-15T15:20:30 EET" duration-ms="9343" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPurchaseFromProductDetails(data.PurchaseWithLoginData)[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:20:30 EET" name="testPurchaseFromProductDetails" data-provider="purchaseLoginData" finished-at="2025-04-15T15:21:01 EET" duration-ms="31402" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.PurchaseWithLoginData@2168def]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPurchaseFromProductDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:21:01 EET" name="tearDown" finished-at="2025-04-15T15:21:01 EET" duration-ms="357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:21:01 EET" name="setUp" finished-at="2025-04-15T15:21:11 EET" duration-ms="9254" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPurchaseWithDirectAddToCart(data.PurchaseWithLoginData)[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:21:11 EET" name="testPurchaseWithDirectAddToCart" data-provider="purchaseLoginData" finished-at="2025-04-15T15:21:41 EET" duration-ms="30200" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.PurchaseWithLoginData@1cfd6f63]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPurchaseWithDirectAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:21:41 EET" name="tearDown" finished-at="2025-04-15T15:21:41 EET" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:21:41 EET" name="setUp" finished-at="2025-04-15T15:21:50 EET" duration-ms="8627" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPurchaseWithLogin(data.PurchaseWithLoginData)[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:21:50 EET" name="testPurchaseWithLogin" data-provider="purchaseLoginData" finished-at="2025-04-15T15:22:24 EET" duration-ms="34075" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.PurchaseWithLoginData@4e67e090]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPurchaseWithLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.product.PurchaseWithLoginTests@73a1e9a9]" started-at="2025-04-15T15:22:24 EET" name="tearDown" finished-at="2025-04-15T15:22:24 EET" duration-ms="432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.product.PurchaseWithLoginTests -->
+    </test> <!-- Product Purchase Tests -->
+    <test started-at="2025-04-15T15:22:24 EET" name="User Interaction Tests" finished-at="2025-04-15T15:23:01 EET" duration-ms="36813">
+      <class name="tests.contact.ContactUsTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.contact.ContactUsTests@3e694b3f]" started-at="2025-04-15T15:22:24 EET" name="setUp" finished-at="2025-04-15T15:22:35 EET" duration-ms="10621" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testContactUsForm(data.ContactUsData)[pri:0, instance:tests.contact.ContactUsTests@3e694b3f]" started-at="2025-04-15T15:22:35 EET" name="testContactUsForm" data-provider="contactUsData" finished-at="2025-04-15T15:22:46 EET" duration-ms="11053" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.ContactUsData@63a9af28]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactUsForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.contact.ContactUsTests@3e694b3f]" started-at="2025-04-15T15:22:46 EET" name="tearDown" finished-at="2025-04-15T15:22:46 EET" duration-ms="355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.contact.ContactUsTests -->
+      <class name="tests.components.SubscriptionTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:tests.components.SubscriptionTests@1bb5a082]" started-at="2025-04-15T15:22:46 EET" name="setUp" finished-at="2025-04-15T15:22:58 EET" duration-ms="11329" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFooterSubscription(data.ContactUsData)[pri:0, instance:tests.components.SubscriptionTests@1bb5a082]" started-at="2025-04-15T15:22:58 EET" name="testFooterSubscription" data-provider="contactUsData" finished-at="2025-04-15T15:23:01 EET" duration-ms="3103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.ContactUsData@3a678e40]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterSubscription -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.components.SubscriptionTests@1bb5a082]" started-at="2025-04-15T15:23:01 EET" name="tearDown" finished-at="2025-04-15T15:23:01 EET" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.components.SubscriptionTests -->
+    </test> <!-- User Interaction Tests -->
+  </suite> <!-- Automation Exercise Test Suite -->
+</testng-results>
