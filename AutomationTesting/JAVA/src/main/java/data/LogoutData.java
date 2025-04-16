@@ -1,17 +1,17 @@
 package data;
 
-public class ContactUsData {
+public class LogoutData {
     private String id;
     private String name;
     private String email;
-    private String subject;
-    private String message;
+    private String password;
     private boolean shouldSucceed;
 
     // Default constructor for Jackson
-    public ContactUsData() {
+    public LogoutData() {
     }
 
+    // Getters and setters
     public String getId() {
         return id;
     }
@@ -36,20 +36,12 @@ public class ContactUsData {
         this.email = email;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public boolean isShouldSucceed() {
