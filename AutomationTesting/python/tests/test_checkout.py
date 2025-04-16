@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from AutomationTesting.python.pages.checkout_page import CheckoutPage
+from pages.checkout_page import CheckoutPage
 
 class TestCheckout:
     def test_user_can_checkout_product(self, driver):
