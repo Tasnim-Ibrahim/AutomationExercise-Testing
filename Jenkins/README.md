@@ -79,3 +79,6 @@ After running the pipeline:
 ## Running the Pipeline
 
 To run the pipeline manually, navigate to the project in Jenkins and click "Build Now".
+
+## Scheduled Execution
+The pipeline is configured to run daily.
