@@ -12,6 +12,12 @@ class TestLogin:
         login_page = LoginPage(driver)
         login_page.go_to_login()
         login_page.login("dummytester789@mail.com", "Test@1234")
+
+        # ✅ Wait until the confirmation text is on the page
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Logged in as')]"))
+        )
+
         assert "Logged in as" in driver.page_source
 
     def test_invalid_login(self, driver):
