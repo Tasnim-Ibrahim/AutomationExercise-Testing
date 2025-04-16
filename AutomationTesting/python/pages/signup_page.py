@@ -3,6 +3,8 @@ import random
 import string
 import time
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class SignupPage:
     def __init__(self, driver):
@@ -44,4 +46,13 @@ class SignupPage:
         self.driver.find_element(*self.zipcode).send_keys("12345")
         self.driver.find_element(*self.mobile).send_keys("1234567890")
 
-        self.driver.find_element(*self.create_account_btn).click()
+        # ✅ Scroll into view
+        button = self.driver.find_element(*self.create_account_btn)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", button)
+
+        # ✅ Wait until clickable
+        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.create_account_btn))
+
+        # ✅ Click safely
+        button.click()
+
