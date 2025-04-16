@@ -36,14 +36,17 @@ AutomationExercise-Testing/
 
 ## 🧰 Tools & Technologies
 
-| Category            | Tools Used                                                   |
-|---------------------|--------------------------------------------------------------|
-| Manual Testing      | Excel, Word, Bug Reports (PDF), Test Cases                   |
-| Automation Testing  | Python, Selenium, Pytest, HTML Report, Allure                |
-| API Testing         | Postman, Newman, JSON-based validation                       |
-| Performance Testing | Apache JMeter                                                |
-| CI/CD               | Jenkins (optional pipeline for test automation)              |
-| Documentation       | Markdown, GitHub Issues, Test Plan Documents                 |
+| Category            | Tools & Technologies                                                                 |
+|---------------------|----------------------------------------------------------------------------------------|
+| Manual Testing      | Excel, Word, Bug Reports (PDF), Test Cases                                             |
+| Automation Testing  | **Python** (Selenium + Pytest), **Java** (Selenium + TestNG/JUnit)                     |
+| API Testing         | Postman, Newman, JavaScript-based tests                                                |
+| Performance Testing | Apache JMeter                                                                          |
+| CI/CD               | Jenkins (pipeline setup for automation execution), GitHub                              |
+| Reporting           | HTML Reports, Allure, Logs                                                             |
+| Database (Mock/Test)| SQL scripts or CSV-based test data (defined in `/Database`)                            |
+| Version Control     | Git, GitHub                                                                            |
+| Documentation       | Markdown, test plan documents, bug reports  
 
 ---
 
