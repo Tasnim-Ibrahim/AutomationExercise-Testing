@@ -21,7 +21,8 @@ Welcome to the **AutomationExercise Testing Project**, a comprehensive QA projec
 AutomationExercise-Testing/
 ├── ManualTesting/          # Test cases, execution logs, and bug reports
 ├── AutomationTesting/
-│   └── python/             # Selenium WebDriver automation using Pytest
+│   ├── python/             # Selenium WebDriver automation using Python + Pytest
+│   └── java/               # Selenium WebDriver automation using Java + TestNG/JUnit
 ├── APITesting/             # Postman collections and test scripts
 ├── PerformanceTesting/     # JMeter test plans and reports
 ├── Reports/                # Generated reports (HTML, Allure, PDF)
@@ -31,9 +32,6 @@ AutomationExercise-Testing/
 ├── test_plan.md            # Test planning documentation
 └── README.md               # Project documentation
 ```
-
-> 📌 **Note:** The `Database/` folder represents placeholder content for test data and schema if available. Please ensure data files are added by the team manually.
-
 ---
 
 ## 🧰 Tools & Technologies
